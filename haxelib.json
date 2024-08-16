@@ -1,0 +1,17 @@
+{
+  "name": "pickhaxe-compat",
+  "url": "https://github.com/EliteMasterEric/pickhaxe-compat",
+  "license": "MIT",
+  "tags": ["java", "minecraft", "fabric", "forge", "neoforge", "quilt", "mods", "modding"],
+  "classPath": "src",
+  "description": "A PickHaxe library aiming to provide cross-version, cross-loader compatibility to Minecraft mods.",
+  "contributors": ["MasterEric"],
+  "releasenote": "Initial release.",
+  "version": "0.1.0",
+  "documentation": {
+    "url": "https://github.com/EliteMasterEric/PickHaxe-Compat/wiki"
+  },
+  "dependencies": {
+    "pickhaxe": ""
+  }
+}

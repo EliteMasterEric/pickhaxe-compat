@@ -1,0 +1,11 @@
+temp/
+
+# Haxe
+dev/
+dump/
+
+# Java
+generated/
+gradle/.gradle/
+gradle/build/
+gradle/gradle/
