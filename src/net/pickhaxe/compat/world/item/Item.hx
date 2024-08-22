@@ -1,6 +1,7 @@
 package net.pickhaxe.compat.world.item;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item as Item_Minecraft;
 
 /**
@@ -32,6 +33,13 @@ abstract Item(Item_Minecraft) from Item_Minecraft to Item_Minecraft
 
     // Chainable.
     return this;
+  }
+
+  /**
+   * Get the resource key for this item, corresponding to its location in the item registry.
+   */
+  public function getKey():ResourceKey<net.minecraft.world.item.Item> {
+    return this.builtInRegistryHolder().key();
   }
 }
 

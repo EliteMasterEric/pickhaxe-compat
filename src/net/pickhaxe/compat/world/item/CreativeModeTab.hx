@@ -92,7 +92,7 @@ abstract CreativeModeTab(CreativeModeTab_Minecraft) from CreativeModeTab_Minecra
   {
     // The initial values for the builder do not matter
     #if minecraft_gteq_1_19_3
-    return CreativeModeTab_Minecraft.builder(null, -1);
+    return CreativeModeTab_Minecraft.builder();
     #else
     return net.pickhaxe.compat.world.item.CreativeModeTabBuilder.CreativeModeTabBuilder_Compat.create();
     #end

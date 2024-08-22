@@ -93,6 +93,7 @@ abstract class ForgeRegistrar<T>
   function registerEntry(helper:net.minecraftforge.registries.RegisterEvent.RegisterEvent_RegisterHelper<T>, entry:ForgeRegistrarEntry<T>):Void
   {
     net.pickhaxe.core.PickHaxe.logInfo("Registering entry " + entry.key);
+    // In Minecraft 1.19, the registry key is a separate argument.
     helper.register(entry.key, entry.value);
   }
   #else
@@ -121,7 +122,7 @@ abstract class ForgeRegistrar<T>
   function registerEntry(registry:net.minecraftforge.registries.IForgeRegistry<T>, entry:ForgeRegistrarEntry<T>):Void
   {
     net.pickhaxe.core.PickHaxe.logInfo("Registering entry " + entry.key);
-    // TODO: Do I need to apply the entry ID first? Or last? Or does it depend?
+    // We only apply the entryID separately in Minecraft 1.18 or earlier
     applyEntryId(entry.key, entry.value);
     registry.register(entry.value);
   }
